@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --form-bg-color: #f2f3f7;
+  font-size: 10px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  background-image: url(../images/bg.jpg);
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.form, .input-box, .form-btn{
+  transition: all .5s ease-in-out;
+}
+.form {
+  color: #5e5e5e;
+  background-color: var(--form-bg-color);
+  font-size: 1.4rem;
+  flex-basis: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0 15px;
+  border-radius: 5px;
+  
+}
+
+.form:invalid,
+.input-box:focus {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(250, 3, 3, 1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(250, 3, 3, 1);
+  box-shadow: 0px 0px 10px 0px rgba(250, 3, 3, 1);
+}
+
+.form:valid, .input-box:valid {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(95, 250, 5, 1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(95, 250, 5, 1);
+  box-shadow: 0px 0px 10px 0px rgba(95, 250, 5, 1);
+}
+
+.form-title {
+  color: #727274;
+  position: relative;
+  font-size: 3.5rem;
+}
+
+.form-text {
+  text-align: center;
+  margin: 10px 0 15px;
+}
+
+.form-title::before,
+.form-title::after {
+  position: absolute;
+  content: "";
+  background-color: #d0d1d5;
+  height: 3px;
+  width: 70px;
+  top: 50%;
+}
+
+.form-title::before {
+  right: calc(100% + 10px);
+}
+
+.form-title::after {
+  left: calc(100% + 10px);
+}
+
+.input-box,
+.accept-wrapper {
+  margin: 15px 0;
+}
+
+.input-box {
+
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgb(189, 189, 189);
+  border-radius: 5px;
+}
+.input-box::placeholder {
+  text-transform: capitalize;
+}
+
+.name {
+  display: flex;
+}
+
+.input-box-name:last-child {
+  margin-left: 10px;
+}
+
+.form-link {
+  color: #4da54e;
+}
+
+.form-btn {
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+  padding: 10px 0;
+  background-color: #4da54e;
+  margin-top: 10px;
+}
+.form-btn:hover{
+  background-color: #197019;
+}
